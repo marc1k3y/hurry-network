@@ -6,9 +6,6 @@
 }
 
 #root {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: whitesmoke;
   height: 100vh;
 }
@@ -18,4 +15,7 @@
   flex-direction: column;
   padding-bottom: 50px;
   padding-top: 50px;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
 }

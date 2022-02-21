@@ -2,6 +2,7 @@ import cn from "./style.module.css"
 import { useState } from "react"
 import arrow from "../../assets/big-top-arrow.svg"
 import { Modal } from "../modal"
+import { Link } from "react-router-dom"
 
 export const Start = () => {
   const [rotate, setRotate] = useState(10)
@@ -18,7 +19,7 @@ export const Start = () => {
     }, 2500)
   }
   return (
-    <div className={cn.welcomeWrapper}>
+    <div className={cn.startWrapper}>
       <div className={cn.switchClients}>
         <div className={cn.iam}>i am</div>
         <div className={cn.choice}>
@@ -38,6 +39,7 @@ export const Start = () => {
         <img src={arrow} alt="arrow"
           style={{ transform: `rotate(${rotate}deg)` }} />
       </div>
+      <Link to="/about">How it work</Link>
       <Modal visible={modal} />
     </div>
   )

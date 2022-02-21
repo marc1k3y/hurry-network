@@ -2,22 +2,15 @@ import { Route, Routes } from "react-router-dom"
 import "./App.css"
 import { Footer } from "./components/footer"
 import { Header } from "./components/header"
-import { Navbar } from "./components/navbar"
-import { routes } from "./routes"
+import { Start } from "./components/start"
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Navbar />
       <div className="app-content">
         <Routes>
-          {routes.map(route =>
-            <Route
-              key={route.path}
-              path={route.path}
-              element={route.element}
-              exact={route.exact} />)}
+          <Route path="*" element={<Start />} />
         </Routes>
       </div>
       <Footer />
