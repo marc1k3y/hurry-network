@@ -9,12 +9,11 @@
   display: flex;
   flex-direction: column;
   background-color: whitesmoke;
+  height: 100vh;
 }
 
 .app-content {
   display: flex;
   flex-direction: column;
-  background-color: whitesmoke;
-  height: 100vh;
   /* margin-bottom: 50px; */
 }
