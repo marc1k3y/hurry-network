@@ -9,11 +9,13 @@ export const Welcome = () => {
   function direct(href) {
     setTimeout(() => {
       window.location.href = href
-      setModal(false)
     }, 2000)
     setTimeout(() => {
       setModal(true)
     }, 500)
+    setTimeout(() => {
+      setModal(false)
+    }, 2500)
   }
   return (
     <div className={cn.welcomeWrapper}>
