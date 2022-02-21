@@ -7,7 +7,7 @@
 
 .startWrapper a {
   position: absolute;
-  bottom: 100px;
+  right: 50px;
   text-decoration: none;
   color: goldenrod;
   font-weight: bold;
@@ -68,5 +68,9 @@
 @media screen and (max-width: 768px) {
   .guest, .cafe {
     cursor: none;
+  }
+  .startWrapper a {
+    right: auto;
+    bottom: 100px;
   }
 }
