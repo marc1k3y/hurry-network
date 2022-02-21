@@ -5,15 +5,16 @@
 }
 
 .switchClients {
-  position: fixed;
-  top: 70px;
+  margin-top: 30px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 10px;
   background-color: white;
   box-shadow: 0 10px 15px gray;
   border-radius: 55px;
   padding: 10px;
-  font-size: 18px;
+  font-size: 28px;
 }
 
 .switchClients a {
@@ -24,45 +25,35 @@
 .guest {
   border-top-left-radius: 55px;
   border-bottom-left-radius: 55px;
-  padding: 20px 30px;
+  padding: 5px 15px 20px 30px;
 }
 
 .cafe {
   border-top-right-radius: 55px;
   border-bottom-right-radius: 55px;
-  padding: 20px 30px;
+  padding: 5px 30px 20px 15px;
 }
 
 .cafe:hover, .guest:hover {
-  background-color: gold;
+  background-color: goldenrod;
   color: black;
   font-weight: bold;
 }
 
 .content {
-  margin-top: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
 }
 
 .content img {
-  margin-top: 30px;
+  margin-top: 20px;
   width: 350px;
-}
-
-.welcome {
-  font-size: 150px;
-  font-weight: bold;
-  color: goldenrod;
+  transform: rotate(10deg);
 }
 
 @media screen and (max-width: 768px) {
   .switchClients a {
     cursor: none;
-  }
-  .welcome {
-    font-size: 70px;
   }
 }
