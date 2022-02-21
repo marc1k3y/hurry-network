@@ -1,0 +1,19 @@
+.headerWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.logoBlock {
+  margin-left: 20px;
+  color: goldenrod;
+  font-size: 36px;
+  font-weight: bold;
+  text-decoration: underline;
+}

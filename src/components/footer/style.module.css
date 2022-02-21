@@ -1,0 +1,11 @@
+.footerWrapper {
+  padding-left: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
