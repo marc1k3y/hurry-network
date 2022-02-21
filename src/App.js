@@ -1,5 +1,5 @@
 import "./App.css"
-// import { Footer } from "./components/footer"
+import { Footer } from "./components/footer"
 import { Header } from "./components/header"
 import { Welcome } from "./components/welcome"
 
@@ -10,7 +10,7 @@ function App() {
       <div className="app-content">
         <Welcome />
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
