@@ -1,0 +1,17 @@
+.modalWrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: goldenrod;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  font-size: 70px;
+  font-weight: bold;
+  color: white;
+}
