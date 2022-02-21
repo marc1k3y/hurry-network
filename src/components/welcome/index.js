@@ -9,6 +9,7 @@ export const Welcome = () => {
   function direct(href) {
     setTimeout(() => {
       window.location.href = href
+      setModal(false)
     }, 2000)
     setTimeout(() => {
       setModal(true)
