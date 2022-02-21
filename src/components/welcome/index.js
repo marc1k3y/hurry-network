@@ -9,10 +9,10 @@ export const Welcome = () => {
   function direct(href) {
     setTimeout(() => {
       window.location.href = href
-    }, 2000)
+    }, 1000)
     setTimeout(() => {
       setModal(true)
-    }, 500)
+    }, 300)
     setTimeout(() => {
       setModal(false)
     }, 2500)
@@ -30,7 +30,7 @@ export const Welcome = () => {
           <span
             className={cn.cafe}
             onClick={() => direct("https://marc1k3y.github.io/hurry-business/")}
-            onMouseEnter={() => setRotate(30)}
+            onMouseEnter={() => setRotate(35)}
             onMouseLeave={() => setRotate(10)}>cafe</span>
         </div>
       </div>
