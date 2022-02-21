@@ -8,6 +8,7 @@
 #root {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: whitesmoke;
   height: 100vh;
 }
@@ -15,5 +16,6 @@
 .app-content {
   display: flex;
   flex-direction: column;
-  /* margin-bottom: 50px; */
+  padding-bottom: 50px;
+  padding-top: 50px;
 }

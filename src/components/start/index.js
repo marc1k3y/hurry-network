@@ -3,7 +3,7 @@ import { useState } from "react"
 import arrow from "../../assets/big-top-arrow.svg"
 import { Modal } from "../modal"
 
-export const Welcome = () => {
+export const Start = () => {
   const [rotate, setRotate] = useState(10)
   const [modal, setModal] = useState(false)
   function direct(href) {
