@@ -1,21 +1,26 @@
 .startWrapper {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  background-color: white;
+  box-shadow: 10px 10px 25px gray;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  width: 80%;
+  padding: 50px;
+  margin-bottom: 50px;
 }
 
-.startWrapper a {
-  position: absolute;
-  right: 50px;
-  text-decoration: none;
-  color: goldenrod;
-  font-weight: bold;
+.makeChoice {
   font-size: 24px;
-  margin-top: 30px;
-  background-color: gray;
-  padding: 10px;
-  border-radius: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  background-color: lightgray;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-style: italic;
 }
 
 .switchClients {
@@ -60,17 +65,13 @@
 }
 
 .content img {
-  margin-top: 20px;
-  width: 250px;
+  margin-top: 30px;
+  width: 150px;
   transform: rotate(10deg);
 }
 
 @media screen and (max-width: 768px) {
   .guest, .cafe {
     cursor: none;
-  }
-  .startWrapper a {
-    right: auto;
-    bottom: 100px;
   }
 }

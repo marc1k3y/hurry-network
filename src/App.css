@@ -7,15 +7,15 @@
 
 #root {
   background-color: whitesmoke;
-  height: 100vh;
+  min-height: 100vh;
+  min-width: 90vw;
 }
 
 .app-content {
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
-  padding-top: 50px;
-  width: 90vw;
+  padding-top: 60px;
   margin-left: auto;
   margin-right: auto;
 }

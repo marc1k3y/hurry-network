@@ -1,5 +1,5 @@
-import { Route, Routes } from "react-router-dom"
 import "./App.css"
+import { About } from "./components/about"
 import { Footer } from "./components/footer"
 import { Header } from "./components/header"
 import { Start } from "./components/start"
@@ -9,9 +9,8 @@ function App() {
     <div className="App">
       <Header />
       <div className="app-content">
-        <Routes>
-          <Route path="*" element={<Start />} />
-        </Routes>
+        <About />
+        <Start />
       </div>
       <Footer />
     </div>
