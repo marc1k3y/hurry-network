@@ -1,0 +1,108 @@
+.shopWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 5px 5px 10px gray;
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 400px;
+  min-width: 250px;
+}
+
+.votes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: goldenrod;
+  margin-right: auto;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  color: white;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.rateControl {
+  font-size: 1.2rem;
+  color: goldenrod;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.rateControl img {
+  width: 15px;
+}
+
+.addr {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(218, 165, 32, 0.7);
+  border: 2px solid gray;
+  margin-bottom: 20px;
+}
+
+.addr img {
+  width: 40px;
+}
+
+.addr>div {
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  border: 2px solid gray;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  overflow-y: scroll;
+  max-height: 210px;
+}
+
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
+.posCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  gap: 5px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  width: 90px;
+}
+
+.posTitle {
+  background-color: rgba(218, 165, 32, 0.7);
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+
+.posCard>button {
+  margin-top: auto;
+  background-color: goldenrod;
+  border: none;
+  padding: 2px 5px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
