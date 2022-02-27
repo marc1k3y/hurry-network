@@ -29,6 +29,15 @@
   gap: 5px;
 }
 
+.list {
+  height: 290px;
+  overflow-y: scroll;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
 .cafeCard {
   margin-top: 10px;
   display: flex;

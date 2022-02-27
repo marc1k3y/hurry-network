@@ -73,7 +73,7 @@
   justify-content: center;
   gap: 5px;
   overflow-y: scroll;
-  max-height: 210px;
+  max-height: 180px;
 }
 
 .menu::-webkit-scrollbar {
