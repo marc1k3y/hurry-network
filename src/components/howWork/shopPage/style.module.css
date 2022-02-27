@@ -1,0 +1,22 @@
+.shopPageWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.switch {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.cafeCard {
+  background-color: white;
+  box-shadow: 5px 5px 10px gray;
+  padding: 10px;
+  border-radius: 20px;
+}

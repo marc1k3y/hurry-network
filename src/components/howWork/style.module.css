@@ -1,0 +1,56 @@
+.howWorkWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  box-shadow: 10px 10px 25px gray;
+  border-radius: 25px;
+  padding: 20px;
+  width: 90%;
+}
+
+.howWorkWrapper>h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 15px 10px;
+  border-radius: 25px;
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  gap: 15px;
+}
+
+.display {
+  border-radius: 15px;
+  padding: 10px;
+  background-color: whitesmoke;
+  min-height: 470px;
+  min-width: 290px;
+}
+
+.homeBtn a {
+  text-decoration: none;
+}
+
+.homeBtn {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 2px solid white;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+
+.btnSquare {
+  border: 2px solid white;
+  padding: 7px;
+  border-radius: 5px;
+}
