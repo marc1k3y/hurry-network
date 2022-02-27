@@ -13,6 +13,12 @@ export const HowWork = () => {
       <div className={cn.helps}></div>
       <div className={cn.phone}
         style={{ display: show ? "flex" : "none" }}>
+        <div className={cn.phoneHeader}>
+          <div className={cn.camera}>
+            <div className={cn.lens}></div>
+          </div>
+          <div className={cn.dynamic}></div>
+        </div>
         <div className={cn.display}>
           <Routes>
             <Route path="*" element={<CafeList />} />
