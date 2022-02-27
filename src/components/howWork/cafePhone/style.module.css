@@ -54,8 +54,8 @@
 
 .tgChat {
   position: relative;
-  min-height: 400px;
-  max-height: 450px;
+  min-height: 390px;
+  max-height: 460px;
   background-image: url("../../../assets/bcg-pic.svg");
 }
 

@@ -26,9 +26,9 @@ export const HowWork = () => {
             <Route path="/cafePhone/:id" element={<CafePhone />} />
           </Routes>
         </div>
-        <div className={cn.homeBtn}>
-          <Link to="/" className={cn.btnSquare}></Link>
-        </div>
+        <Link to="/" className={cn.homeBtn}>
+          <div to="/" className={cn.btnSquare}></div>
+        </Link>
       </div>
     </div>
   )
