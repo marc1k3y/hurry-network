@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/hurry-network/static/css/main.5eb9ed22.css",
-    "main.js": "/hurry-network/static/js/main.ad031444.js",
+    "main.css": "/hurry-network/static/css/main.bb3eef23.css",
+    "main.js": "/hurry-network/static/js/main.b871cb7a.js",
     "static/media/big-top-arrow.svg": "/hurry-network/static/media/big-top-arrow.3da4e47f344a9fce0104f970a94106e5.svg",
     "static/media/address.svg": "/hurry-network/static/media/address.708febedaf025fe2547c179d56a7de78.svg",
     "static/media/hurry2.svg": "/hurry-network/static/media/hurry2.7f21b55f9c600baa17201d7ad2bc6670.svg",
     "static/media/dislike.svg": "/hurry-network/static/media/dislike.c2111d4013f103c1da8db0af957c0e22.svg",
     "static/media/like.svg": "/hurry-network/static/media/like.cf4d601145b73fa09e1f5ecc0cb11773.svg",
     "index.html": "/hurry-network/index.html",
-    "main.5eb9ed22.css.map": "/hurry-network/static/css/main.5eb9ed22.css.map",
-    "main.ad031444.js.map": "/hurry-network/static/js/main.ad031444.js.map"
+    "main.bb3eef23.css.map": "/hurry-network/static/css/main.bb3eef23.css.map",
+    "main.b871cb7a.js.map": "/hurry-network/static/js/main.b871cb7a.js.map"
   },
   "entrypoints": [
-    "static/css/main.5eb9ed22.css",
-    "static/js/main.ad031444.js"
+    "static/css/main.bb3eef23.css",
+    "static/js/main.b871cb7a.js"
   ]
 }
