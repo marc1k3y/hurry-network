@@ -71,15 +71,26 @@
 }
 
 .lens {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 7.5px;
   width: 7.5px;
   background-color: rgba(0, 0, 0, 0.609);
   border-radius: 50%;
-  box-shadow: 0 0 10px gray;
+  box-shadow: 0 0 10px black;
+}
+
+.dot {
+  height: 4px;
+  width: 4px;
+  background-color: black;
+  border-radius: 50%;
+  box-shadow: 0 0 3px black;
 }
 
 .dynamic {
-  width: 80px;
+  width: 70px;
   height: 7px;
   background-color: gray;
   box-shadow: 0 0 10px gray;
@@ -88,7 +99,9 @@
   background-image:
   repeating-linear-gradient(#ccc 0 1px, transparent 1px 100%),
   repeating-linear-gradient(90deg, black 0 1px, transparent 1px 100%);
-  background-size: 3px 3px; 
+  background-size: 2px 2px;
+  opacity: 0.7;
+  border: 2px solid rgba(0, 0, 0, 0.7);
 }
 
 .display {
@@ -115,16 +128,20 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
 }
 
 .btnSquare {
-  border: 2px solid white;
+  border: 2px solid rgba(255, 255, 255, 0.6);
   padding: 7px;
   border-radius: 5px;
+}
+
+.btnSquare:active {
+  box-shadow: 0px 0px 20px gray;
 }
 
 @media screen and (max-width: 768px) {

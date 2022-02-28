@@ -15,7 +15,9 @@ export const HowWork = () => {
         style={{ display: show ? "flex" : "none" }}>
         <div className={cn.phoneHeader}>
           <div className={cn.camera}>
-            <div className={cn.lens}></div>
+            <div className={cn.lens}>
+              <div className={cn.dot}></div>
+            </div>
           </div>
           <div className={cn.dynamic}></div>
         </div>
