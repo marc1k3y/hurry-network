@@ -1,14 +1,9 @@
 import cn from "./style.module.css"
 import { NavLink } from "react-router-dom"
+import { useSelector } from "react-redux"
 
 export const CafeList = () => {
-
-  const cafeList = [
-    { id: 2, title: "Super Bean", rating: 10, addr: { country: "Russia", city: "Voronezh" } },
-    { id: 4, title: "Pikale", rating: 9, addr: { country: "Canada", city: "Ottawa" } },
-    { id: 1, title: "Zaryad", rating: 8, addr: { country: "Russia", city: "Voronezh" } },
-    { id: 3, title: "Starbins", rating: 7, addr: { country: "America", city: "New York" } }
-  ]
+  const { cafes } = useSelector(state => state.cafes)
 
   return (
     <div className={cn.cafeListWrapper}>
@@ -19,7 +14,7 @@ export const CafeList = () => {
         <input type="checkbox" />
       </div>
       <div className={cn.list}>
-        {cafeList.map(cafe =>
+        {cafes.map(cafe =>
           <div key={cafe.id} className={cn.cafeCard}>
             <NavLink to={`/shopPage/${cafe.id}`}>{cafe.title}</NavLink>
             <div>rating: {cafe.rating}</div>

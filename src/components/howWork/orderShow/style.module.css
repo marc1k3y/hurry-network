@@ -9,7 +9,6 @@
   top: 40px;
   left: 5px;
   animation: fly 4s linear;
-  z-index: 200;
 }
 
 .order img {
@@ -18,6 +17,7 @@
 
 .cafe {
   margin-top: auto;
+  z-index: 200;
 }
 
 @keyframes fly {

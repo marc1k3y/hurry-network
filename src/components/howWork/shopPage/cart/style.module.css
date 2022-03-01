@@ -30,6 +30,12 @@
   border-radius: 10px;
   margin-bottom: 10px;
   width: 80%;
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+.posList::-webkit-scrollbar {
+  display: none;
 }
 
 .posCard {

@@ -33,8 +33,8 @@ export const Cart = ({ visible }) => {
       <div className={cn.clear} onClick={clearCart}>clear</div>
       <div className={cn.posList}>
         {cart.length > 0
-          ? cart.map(pos =>
-            <div key={pos.id} className={cn.posCard}>
+          ? cart.map((pos, index) =>
+            <div key={index} className={cn.posCard}>
               <div>{pos.title}</div>
               <div>{pos.option}</div>
               <div className={cn.hideDiv}>
