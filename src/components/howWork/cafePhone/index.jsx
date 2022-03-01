@@ -2,8 +2,10 @@ import cn from "./style.module.css"
 import leftArrow from "../../../assets/left-arrow-tg.svg"
 import logo from "../../../assets/hurry2.svg"
 import option from "../../../assets/triple-dots.svg"
+import { useSelector } from "react-redux"
 
 export const CafePhone = () => {
+  const { order } = useSelector(state => state.order)
   return (
     <div className={cn.CafePhoneWrapper}>
       <div className={cn.tgHeader}>
@@ -25,7 +27,15 @@ export const CafePhone = () => {
       </div>
       <div className={cn.tgChat}>
         <div className={cn.message}>
-          hello
+          {order.uName} <br />
+          Pick up order at: {order.pUpTime}
+          <br /> <br />
+          {order.cart?.map(pos =>
+            <div>
+              <div>{pos.title}: {pos.option}</div>
+            </div>)}
+          <br />
+          <div>Total: {order.total}{order.currency}</div>
         </div>
       </div>
       <div className={cn.tgFooter}>

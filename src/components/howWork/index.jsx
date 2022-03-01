@@ -40,13 +40,15 @@ export const HowWork = () => {
           <PhoneModal visible={phoneModal}>
             <div className={cn.modalTitle}>Enter name</div>
             <div className={cn.modalInput}>
-              <input type="text" placeholder="Jhon" value={uName} onChange={(e) => setUName(e.target.value)} />
+              <input type="text" placeholder="Jhon" value={uName.charAt(0).toUpperCase() + uName.slice(1)} onChange={(e) => setUName(e.target.value)} />
             </div>
             <div className={cn.modalBtn}>
               <button
                 onClick={() => {
-                  dispatch(setNameAction(uName))
-                  setPhoneModal(false)
+                  if (uName.length > 1) {
+                    dispatch(setNameAction(uName))
+                    setPhoneModal(false)
+                  }
                 }}>ok</button>
             </div>
           </PhoneModal>
