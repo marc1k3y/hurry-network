@@ -5,6 +5,8 @@ import { clearCartAction } from "../../../../store/cart/actions"
 export const Cart = ({ visible }) => {
   const dispatch = useDispatch()
   const { cart } = useSelector(state => state.cart)
+  let total = 0
+  let currency = null
 
   function clearCart() {
     dispatch(clearCartAction())
@@ -19,10 +21,14 @@ export const Cart = ({ visible }) => {
             <div key={pos.id} className={cn.posCard}>
               <div>{pos.title}</div>
               <div>{pos.option}</div>
+              <div className={cn.hideDiv}>
+                {total += parseInt(pos.price)}
+                {currency = pos.price.split(parseInt(pos.price))}
+              </div>
             </div>)
           : <div className={cn.cartEmpty}>Cart empty</div>}
       </div>
-      <div className={cn.total}>Total:</div>
+      <div className={cn.total}>Total: {total}{currency}</div>
       <div className={cn.time}>
         Pick up at:
         <input type="time" />

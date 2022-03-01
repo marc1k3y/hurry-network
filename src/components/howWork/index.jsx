@@ -2,11 +2,21 @@ import cn from "./style.module.css"
 import { Routes, Route, Link } from "react-router-dom"
 import { CafeList } from "./cafeList"
 import { ShopPage } from "./shopPage"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { CafePhone } from "./cafePhone"
+import { PhoneModal } from "./phoneModal"
+import { useDispatch } from "react-redux"
+import { setNameAction } from "../../store/user/actions"
 
 export const HowWork = () => {
+  const dispatch = useDispatch()
   const [show, setShow] = useState(false)
+  const [phoneModal, setPhoneModal] = useState(false)
+  const [uName, setUName] = useState("")
+
+  useEffect(() => {
+    show && setPhoneModal(true)
+  }, [show])
   return (
     <div className={cn.howWorkWrapper}>
       <h2 onClick={() => setShow(!show)} style={{ animation: show && "none" }}>{`${show ? "Hide" : "How it work?"}`}</h2>
@@ -27,6 +37,19 @@ export const HowWork = () => {
             <Route path="/shopPage/:id" element={<ShopPage />} />
             <Route path="/cafePhone/:id" element={<CafePhone />} />
           </Routes>
+          <PhoneModal visible={phoneModal}>
+            <div className={cn.modalTitle}>Enter name</div>
+            <div className={cn.modalInput}>
+              <input type="text" placeholder="Jhon" value={uName} onChange={(e) => setUName(e.target.value)} />
+            </div>
+            <div className={cn.modalBtn}>
+              <button
+                onClick={() => {
+                  dispatch(setNameAction(uName))
+                  setPhoneModal(false)
+                }}>ok</button>
+            </div>
+          </PhoneModal>
         </div>
         <Link to="/" className={cn.homeBtn}>
           <div to="/" className={cn.btnSquare}></div>

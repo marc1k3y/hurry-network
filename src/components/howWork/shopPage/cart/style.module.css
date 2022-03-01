@@ -24,6 +24,7 @@
 .posList {
   display: flex;
   flex-direction: column;
+  gap: 5px;
   border: 2px solid gray;
   padding: 10px 5px;
   border-radius: 10px;
@@ -36,12 +37,23 @@
   justify-content: space-between;
 }
 
+.hideDiv {
+  display: none;
+}
+
 .total {
   margin-bottom: 10px;
 }
 
 .time {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   margin-bottom: 20px;
+}
+
+.time>input {
+  padding: 2px;
 }
 
 .cartWrapper>button {

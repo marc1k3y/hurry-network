@@ -105,6 +105,7 @@
 }
 
 .display {
+  position: relative;
   border-radius: 10px;
   padding: 20px;
   background-color: whitesmoke;
@@ -118,6 +119,35 @@
 
 .display::-webkit-scrollbar {
   display: none;
+}
+
+.modalTitle {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: goldenrod;
+}
+
+.modalInput>input {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 2px solid gray;
+  margin-bottom: 10px;
+}
+
+.modalBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalBtn>button {
+  background-color: #24a0ed;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 35px;
+  font-weight: bold;
+  border: none;
 }
 
 .phone a {
