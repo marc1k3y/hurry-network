@@ -7,13 +7,16 @@ import { useDispatch, useSelector } from "react-redux"
 import { pushToCartAction } from "../../../../store/cart/actions"
 import { Helper } from "../../helper"
 import { useState } from "react"
+import { uzeVoteAction } from "../../../../store/user/actions"
 
 export const Shop = ({ visible, cartSwitch }) => {
 
   const dispatch = useDispatch()
   const { pathname } = useLocation()
   const cafeId = parseInt(pathname.split("/")[2])
+  const { votes } = useSelector(state => state.user)
   const { cafes } = useSelector(state => state.cafes)
+  const [rateCntrl, setRateCntrl] = useState(0)
   const [helpText, setHelpText] = useState("Please choose one or more drinks")
 
   const CartRedirect = () => {
@@ -30,16 +33,26 @@ export const Shop = ({ visible, cartSwitch }) => {
     setHelpText(CartRedirect)
   }
 
+  function downRate() {
+    setRateCntrl(rateCntrl - 1)
+    dispatch(uzeVoteAction())
+  }
+
+  function upRate() {
+    setRateCntrl(rateCntrl + 1)
+    dispatch(uzeVoteAction())
+  }
+
   return (
     cafes.map(cafe =>
       cafeId === cafe.id &&
       <div key={cafe.title} className={cn.shopWrapper} style={{ display: visible ? "flex" : "none" }}>
-        <div className={cn.votes}>2</div>
+        <div className={cn.votes}>{votes}</div>
         <div className={cn.title}>{cafe.title}</div>
         <div className={cn.rateControl}>
-          <img src={dislike} alt=":(" />
-          RATE: {cafe.rating}
-          <img src={like} alt=":)" />
+          {votes > 0 && <img src={dislike} alt=":(" onClick={downRate} />}
+          RATE: {cafe.rating + rateCntrl}
+          {votes > 0 && <img src={like} alt=":)" onClick={upRate} />}
         </div>
         <div className={cn.addr}>
           <img src={address} alt="addr" />
