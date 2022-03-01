@@ -1,4 +1,5 @@
 import cn from "./style.module.css"
+import { useNavigate } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
 import { clearCartAction } from "../../../../store/cart/actions"
 import { sendOrderAction } from "../../../../store/order/actions"
@@ -6,22 +7,26 @@ import { useState } from "react"
 
 export const Cart = ({ visible }) => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const { uName } = useSelector(state => state.user)
   const { cart } = useSelector(state => state.cart)
   const [pUpTime, setPUpTime] = useState("")
   let total = 0
   let currency = ""
 
+  function clearCart() {
+    dispatch(clearCartAction())
+  }
+
   function sendOrder() {
     const order = {
       uName, pUpTime, cart, total, currency
     }
     dispatch(sendOrderAction(order))
+    navigate("/orderShow")
+    clearCart()
   }
 
-  function clearCart() {
-    dispatch(clearCartAction())
-  }
   return (
     <div className={cn.cartWrapper} style={{ display: visible ? "flex" : "none" }}>
       <div className={cn.title}>Cart</div>
@@ -42,7 +47,7 @@ export const Cart = ({ visible }) => {
       <div className={cn.total}>Total: {total}{currency}</div>
       <div className={cn.time}>
         Pick up at:
-        <input type="time" value={pUpTime} onChange={(e) => setPUpTime(e.target.value)} />
+        <input required type="time" value={pUpTime} onChange={(e) => setPUpTime(e.target.value)} />
       </div>
       <button onClick={sendOrder}>Order</button>
     </div>

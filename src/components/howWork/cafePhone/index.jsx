@@ -30,8 +30,8 @@ export const CafePhone = () => {
           {order.uName} <br />
           Pick up order at: {order.pUpTime}
           <br /> <br />
-          {order.cart?.map(pos =>
-            <div>
+          {order.cart?.map((pos, index) =>
+            <div key={index}>
               <div>{pos.title}: {pos.option}</div>
             </div>)}
           <br />

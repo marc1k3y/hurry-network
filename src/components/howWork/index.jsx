@@ -7,6 +7,7 @@ import { CafePhone } from "./cafePhone"
 import { PhoneModal } from "./phoneModal"
 import { useDispatch } from "react-redux"
 import { setNameAction } from "../../store/user/actions"
+import { OrderShow } from "./orderShow"
 
 export const HowWork = () => {
   const dispatch = useDispatch()
@@ -36,6 +37,7 @@ export const HowWork = () => {
             <Route path="*" element={<CafeList />} />
             <Route path="/shopPage/:id" element={<ShopPage />} />
             <Route path="/cafePhone/:id" element={<CafePhone />} />
+            <Route path="/orderShow" element={<OrderShow />} />
           </Routes>
           <PhoneModal visible={phoneModal}>
             <div className={cn.modalTitle}>Enter name</div>
