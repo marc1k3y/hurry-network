@@ -8,6 +8,7 @@ import { PhoneModal } from "./phoneModal"
 import { useDispatch } from "react-redux"
 import { setNameAction } from "../../store/user/actions"
 import { OrderShow } from "./orderShow"
+import { Helper } from "./helper"
 
 export const HowWork = () => {
   const dispatch = useDispatch()
@@ -40,6 +41,7 @@ export const HowWork = () => {
             <Route path="/orderShow" element={<OrderShow />} />
           </Routes>
           <PhoneModal visible={phoneModal}>
+            <Helper visible={true}>Hello, it's simulator, your order will not ship</Helper>
             <div className={cn.modalTitle}>Enter name</div>
             <div className={cn.modalInput}>
               <input type="text" placeholder="Jhon" value={uName.charAt(0).toUpperCase() + uName.slice(1)} onChange={(e) => setUName(e.target.value)} />

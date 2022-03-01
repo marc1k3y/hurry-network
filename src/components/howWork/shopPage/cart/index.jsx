@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { clearCartAction } from "../../../../store/cart/actions"
 import { sendOrderAction } from "../../../../store/order/actions"
 import { useState } from "react"
+import { Helper } from "../../helper"
 
 export const Cart = ({ visible }) => {
   const dispatch = useDispatch()
@@ -45,6 +46,9 @@ export const Cart = ({ visible }) => {
           : <div className={cn.cartEmpty}>Cart empty</div>}
       </div>
       <div className={cn.total}>Total: {total}{currency}</div>
+      <Helper visible={true}>
+        Please set time and click to order
+      </Helper>
       <div className={cn.time}>
         Pick up at:
         <input required type="time" value={pUpTime} onChange={(e) => setPUpTime(e.target.value)} />

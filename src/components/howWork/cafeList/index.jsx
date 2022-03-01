@@ -1,6 +1,7 @@
 import cn from "./style.module.css"
 import { NavLink } from "react-router-dom"
 import { useSelector } from "react-redux"
+import { Helper } from "../helper"
 
 export const CafeList = () => {
   const { cafes } = useSelector(state => state.cafes)
@@ -13,6 +14,9 @@ export const CafeList = () => {
         Looking local cafes
         <input type="checkbox" />
       </div>
+      <Helper visible={true}>
+        Choose Coffeeshop
+      </Helper>
       <div className={cn.list}>
         {cafes.map(cafe =>
           <div key={cafe.id} className={cn.cafeCard}>

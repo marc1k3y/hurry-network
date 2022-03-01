@@ -21,7 +21,7 @@ export const ShopPage = () => {
           cart
         </div>
       </div>
-      <Shop visible={display} />
+      <Shop visible={display} cartSwitch={setDisplay} />
       <Cart visible={!display} />
     </div>
   )

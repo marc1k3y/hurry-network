@@ -26,7 +26,7 @@ export const Start = () => {
           <span
             className={cn.guest}
             onClick={() => direct("https://marc1k3y.github.io/hurry-user/")}
-            onMouseEnter={() => setRotate(-15)}
+            onMouseEnter={() => setRotate(-20)}
             onMouseLeave={() => setRotate(10)}>guest</span>
           <span
             className={cn.cafe}

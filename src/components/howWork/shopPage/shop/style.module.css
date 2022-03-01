@@ -68,6 +68,7 @@
 }
 
 .menu {
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -91,6 +92,10 @@
   width: 100px;
 }
 
+.posCard:active {
+  background-color: rgba(218, 165, 32, 0.3);
+}
+
 .posTitle {
   background-color: rgba(218, 165, 32, 0.7);
   padding: 2px 5px;
@@ -105,4 +110,17 @@
   border-radius: 10px;
   color: white;
   cursor: pointer;
+}
+
+.cartRedirect {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.cartRedirect>button {
+  background-color: goldenrod;
+  padding: 2px 3px;
+  border: none;
+  border-radius: 10px;
 }

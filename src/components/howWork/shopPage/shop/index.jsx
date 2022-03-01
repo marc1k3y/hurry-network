@@ -5,16 +5,29 @@ import dislike from "../../../../assets/dislike.svg"
 import address from "../../../../assets/address.svg"
 import { useDispatch, useSelector } from "react-redux"
 import { pushToCartAction } from "../../../../store/cart/actions"
+import { Helper } from "../../helper"
+import { useState } from "react"
 
-export const Shop = ({ visible }) => {
+export const Shop = ({ visible, cartSwitch }) => {
 
   const dispatch = useDispatch()
   const { pathname } = useLocation()
   const cafeId = parseInt(pathname.split("/")[2])
   const { cafes } = useSelector(state => state.cafes)
+  const [helpText, setHelpText] = useState("Please choose one or more drinks")
+
+  const CartRedirect = () => {
+    return (
+      <div className={cn.cartRedirect}>
+        Please go to
+        <button onClick={() => cartSwitch(false)}>cart</button>
+      </div>
+    )
+  }
 
   function pushToCart(id, title, option, price) {
     dispatch(pushToCartAction({ id, title, option, price }))
+    setHelpText(CartRedirect)
   }
 
   return (
@@ -31,13 +44,16 @@ export const Shop = ({ visible }) => {
         <div className={cn.addr}>
           <img src={address} alt="addr" />
           <div>
-            {cafe.addr.country}
+            {cafe.addr.country + " "}
             {cafe.addr.city}
             <br />
             {cafe.addr.street}
             {cafe.addr.build}
           </div>
         </div>
+        <Helper visible={true}>
+          {helpText}
+        </Helper>
         <div className={cn.menu}>
           {cafe.menu.map(pos =>
             <div key={pos.id} className={cn.posCard}>
