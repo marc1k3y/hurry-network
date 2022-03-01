@@ -3,9 +3,12 @@ import { useLocation } from "react-router-dom"
 import like from "../../../../assets/like.svg"
 import dislike from "../../../../assets/dislike.svg"
 import address from "../../../../assets/address.svg"
+import { useDispatch } from "react-redux"
+import { pushToCartAction } from "../../../../store/cart/actions"
 
 export const Shop = ({ visible }) => {
 
+  const dispatch = useDispatch()
   const { pathname } = useLocation()
   const cafeId = parseInt(pathname.split("/")[2])
 
@@ -17,10 +20,10 @@ export const Shop = ({ visible }) => {
         { id: 2, title: "Cappucino", option: "250ml", price: "120rub" },
         { id: 3, title: "Mocha", option: "350ml", price: "170rub" },
         { id: 4, title: "Latte", option: "350ml", price: "160rub" },
-        { id: 1, title: "Americano", option: "250ml", price: "100rub" },
-        { id: 2, title: "Cappucino", option: "250ml", price: "120rub" },
-        { id: 3, title: "Mocha", option: "350ml", price: "170rub" },
-        { id: 4, title: "Latte", option: "350ml", price: "160rub" }]
+        { id: 5, title: "Americano", option: "250ml", price: "100rub" },
+        { id: 6, title: "Cappucino", option: "250ml", price: "120rub" },
+        { id: 7, title: "Mocha", option: "350ml", price: "170rub" },
+        { id: 8, title: "Latte", option: "350ml", price: "160rub" }]
     },
     {
       id: 4, title: "Pikale", rating: 9, addr: { country: "Canada ", city: "Ottawa", street: "Portage Avenue ", build: "7" },
@@ -35,6 +38,10 @@ export const Shop = ({ visible }) => {
       menu: [{ id: 1, title: "Americano", option: "350ml", price: "16$" }]
     }
   ]
+
+  function pushToCart(id, title, option, price) {
+    dispatch(pushToCartAction({ id, title, option, price }))
+  }
 
   return (
     cafes.map(cafe =>
@@ -63,7 +70,10 @@ export const Shop = ({ visible }) => {
               <div className={cn.posTitle}>{pos.title}</div>
               <div>{pos.option}</div>
               <div>{pos.price}</div>
-              <button>to cart</button>
+              <button
+                onClick={() => pushToCart(pos.id, pos.title, pos.option, pos.price)}>
+                to cart
+              </button>
             </div>
           )}
         </div>

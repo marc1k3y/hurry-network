@@ -21,6 +21,21 @@
   margin-bottom: 10px;
 }
 
+.posList {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid gray;
+  padding: 10px 5px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+.posCard {
+  display: flex;
+  justify-content: space-between;
+}
+
 .total {
   margin-bottom: 10px;
 }
