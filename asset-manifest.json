@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hurry-network/static/css/main.ccc24dd2.css",
-    "main.js": "/hurry-network/static/js/main.878855c2.js",
+    "main.css": "/hurry-network/static/css/main.4449e061.css",
+    "main.js": "/hurry-network/static/js/main.e3d94c4c.js",
     "static/media/bcg-pic.svg": "/hurry-network/static/media/bcg-pic.6e0f1869e244aa9ed7c2.svg",
     "static/media/big-top-arrow.svg": "/hurry-network/static/media/big-top-arrow.3da4e47f344a9fce0104f970a94106e5.svg",
     "static/media/shop-filled.svg": "/hurry-network/static/media/shop-filled.d8680cca88a7f1cb2fef73fe73f33819.svg",
@@ -9,16 +9,17 @@
     "static/media/shop-unfilled.svg": "/hurry-network/static/media/shop-unfilled.461e3931a34c7664fcbe2482d70123e1.svg",
     "static/media/address.svg": "/hurry-network/static/media/address.708febedaf025fe2547c179d56a7de78.svg",
     "static/media/hurry2.svg": "/hurry-network/static/media/hurry2.7f21b55f9c600baa17201d7ad2bc6670.svg",
+    "static/media/wifi.svg": "/hurry-network/static/media/wifi.f96173254740abd472f8b6b4fb1a0b9f.svg",
     "static/media/dislike.svg": "/hurry-network/static/media/dislike.c2111d4013f103c1da8db0af957c0e22.svg",
     "static/media/like.svg": "/hurry-network/static/media/like.1e1d57c655b53174feed7e09060346bc.svg",
     "static/media/left-arrow-tg.svg": "/hurry-network/static/media/left-arrow-tg.2d3f7c605dfcaccfc94477fd7001b9af.svg",
     "index.html": "/hurry-network/index.html",
     "static/media/triple-dots.svg": "/hurry-network/static/media/triple-dots.d64ea862693ef8ca7e63f98d8265a9a1.svg",
-    "main.ccc24dd2.css.map": "/hurry-network/static/css/main.ccc24dd2.css.map",
-    "main.878855c2.js.map": "/hurry-network/static/js/main.878855c2.js.map"
+    "main.4449e061.css.map": "/hurry-network/static/css/main.4449e061.css.map",
+    "main.e3d94c4c.js.map": "/hurry-network/static/js/main.e3d94c4c.js.map"
   },
   "entrypoints": [
-    "static/css/main.ccc24dd2.css",
-    "static/js/main.878855c2.js"
+    "static/css/main.4449e061.css",
+    "static/js/main.e3d94c4c.js"
   ]
 }
