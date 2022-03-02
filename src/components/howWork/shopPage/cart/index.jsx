@@ -1,5 +1,5 @@
 import cn from "./style.module.css"
-import { useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
 import { clearCartAction } from "../../../../store/cart/actions"
 import { sendOrderAction } from "../../../../store/order/actions"
@@ -8,6 +8,8 @@ import { Helper } from "../../helper"
 
 export const Cart = ({ visible }) => {
   const dispatch = useDispatch()
+  const { pathname } = useLocation()
+  const cafeId = parseInt(pathname.split("/")[2])
   const navigate = useNavigate()
   const { uName } = useSelector(state => state.user)
   const { cart } = useSelector(state => state.cart)
@@ -24,7 +26,7 @@ export const Cart = ({ visible }) => {
       uName, pUpTime, cart, total, currency
     }
     dispatch(sendOrderAction(order))
-    navigate("/orderShow")
+    navigate(`/orderShow/${cafeId}`)
     clearCart()
   }
 

@@ -38,7 +38,7 @@ export const HowWork = () => {
             <Route path="*" element={<CafeList />} />
             <Route path="/shopPage/:id" element={<ShopPage />} />
             <Route path="/cafePhone/:id" element={<CafePhone />} />
-            <Route path="/orderShow" element={<OrderShow />} />
+            <Route path="/orderShow/:id" element={<OrderShow />} />
           </Routes>
           <PhoneModal visible={phoneModal}>
             <Helper visible={true}>Hello, it's simulator, your order will not ship</Helper>
